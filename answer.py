@@ -34,11 +34,12 @@ def knapsack(filename):
     return (selected_items, table[n_items][capacity])
 
 
-    # Print the result
-    for item in reversed(selected_items):
-        print(item)
-    print(table[n_items][capacity])
+   
 
 if __name__ == "__main__":
     filename = input()
-    knapsack(filename)
+    result = knapsack(filename)
+    for item in reversed(result[0]):
+        print(item)
+    print(result[1])
+

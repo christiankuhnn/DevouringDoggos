@@ -24,17 +24,14 @@ def knapsack(items, capacity):
         print(item)
     print(table[n_items][capacity])
 
-
-
 if __name__ == '__main__':
-    with open('items.txt') as f:
-        n_items = int(f.readline())
-        capacity = int(f.readline())
-        items = []
-        for _ in range(n_items):
-            line = f.readline().split()
-            item_name = line[0]
-            item_weight = int(line[1])
-            item_value = int(line[2])
-            items.append((item_name, item_weight, item_value))
+    n_items = int(input())
+    capacity = int(input())
+    items = []
+    for _ in range(n_items):
+        line = input().split()
+        item_name = line[0]
+        item_weight = int(line[1])
+        item_value = int(line[2])
+        items.append((item_name, item_weight, item_value))
     knapsack(items, capacity)
